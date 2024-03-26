@@ -1,5 +1,5 @@
 body {
-    background-color: #f5ebe0;
+    background-color: #A56E46;
     text-align: center;
 }
 
@@ -18,20 +18,20 @@ p {
 
 .card {
     text-align: center;
-    background-color: #A9CAEC;
+    background-color: #e5c9ae;
     padding: 1rem;
-    color: white;
+    color: #4f300f;
     width: 15rem;
     height: 35rem;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px #CFB294;
+    box-shadow: 3px 4px #62370c;
     display: inline-grid;
-    border-radius: 15px;
+    border-radius: 46% 54% 64% 36% / 61% 44% 56% 39%;
 }
 
 .dog-image {
     justify-self: center;
-    border-radius: 15px;
+    border-radius: 46% 54% 64% 36% / 61% 44% 56% 39%;
     height: 10rem;
     width: auto;
     margin-top: 2rem;

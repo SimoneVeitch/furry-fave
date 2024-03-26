@@ -8,7 +8,7 @@ function renderOneDog(dog){
     <h3>${dog.name} the ${dog.breed}</h3>
     <p>${dog.description}</p>
     <p>${dog.likes} likes</p>
-    <button class="like-btn" data-id="${dog.id}">Like ❤️</button>
+    <button class="like-btn" data-id="${dog.id}">Like 🐾</button>
     `;
     document.querySelector("#cards").appendChild(card);
 }
