@@ -68,4 +68,34 @@ function handleLike(event) {
         barkSpan.textContent = 'WOOF!';
     });
 
+    // Handle submit function
+    document.querySelector('#form').addEventListener('submit', handleSubmit);
+
+    function handleSubmit(e){
+        e.preventDefault();
+        let dogObj = {
+            name:e.target.name.value,
+            breed:e.target.breed.value,
+            description:e.target.description.value,
+            image:e.target.image.value,
+            likes: 0
+        };
+        renderOneDog(dogObj);
+        addNewDog(dogObj);
+    }
+
+    function addNewDog(dogObj){
+        fetch('http://localhost:3000/dogs', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(dogObj)
+        })
+        .then(response => response.json())
+        .then(dog => console.log(dog))
+        .catch(error => console.error("Error adding dog", error));
+    }
+
+
 })

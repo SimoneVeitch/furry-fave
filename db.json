@@ -38,7 +38,15 @@
       "name": "Bob",
       "breed": "Bulldog",
       "description": "Bob is tenacious and courageous, but also very goofy. He is highly affectionate and kind, and loves to nap and eat",
-      "likes": 5
+      "likes": 6
+    },
+    {
+      "id": "7031",
+      "name": "Coco",
+      "breed": "Cavapoo",
+      "description": "Coco is affectionate and intelligent, energetic and full of fun",
+      "image": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2023-01/Hero%20Cavapoo%201.jpg",
+      "likes": 1
     }
   ]
 }
