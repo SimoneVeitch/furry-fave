@@ -1,6 +1,10 @@
 body {
-    background-color: #DCF1FA;
+    background-color: #f5ebe0;
     text-align: center;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo {
@@ -8,14 +12,40 @@ body {
     height: auto;
 }
 
+#cards {
+    margin: 2rem;
+}
+
 .card {
     text-align: center;
-    border: black 1px;
-    display: flex;
+    background-color: #A9CAEC;
+    padding: 1rem;
+    color: white;
+    width: 15rem;
+    height: 35rem;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #CFB294;
+    display: inline-grid;
+    border-radius: 15px;
 }
 
 .dog-image {
     justify-self: center;
-    height: 12rem;
+    border-radius: 15px;
+    height: 10rem;
     width: auto;
+    margin-top: 2rem;
+}
+
+
+.like-btn {
+    background-color: #CFB294;
+    color: white;
+    position: relative;
+    border: none;
+    border-radius: 15px;
+    justify-self: center;
+    height: 2rem;
+    width: 6rem;
+    margin-bottom: 2rem;
 }

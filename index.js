@@ -5,10 +5,9 @@ function renderOneDog(dog){
     card.className = 'card';
     card.innerHTML = `
     <img src="${dog.image}" class="dog-image" />
-    <h2>${dog.name}</h2>
-    <p><strong>${dog.breed}</strong></p>
+    <h3>${dog.name} the ${dog.breed}</h3>
     <p>${dog.description}</p>
-    <p>${dog.likes}</p>
+    <p>${dog.likes} likes</p>
     <button class="like-btn" data-id="${dog.id}">Like ❤️</button>
     `;
     document.querySelector("#cards").appendChild(card);
