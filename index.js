@@ -56,4 +56,16 @@ function handleLike(event) {
         .catch(error => console.error("Error updating dog likes", error));
     }
 
+    // Changing woof to hello on mouse over
+    const barkSpan = document.querySelector('.bark');
+
+    barkSpan.addEventListener('mouseenter', function() {
+        console.log('Entered')
+        barkSpan.textContent = 'HELLO!';
+    });
+
+    barkSpan.addEventListener('mouseleave', function() {
+        barkSpan.textContent = 'WOOF!';
+    });
+
 })

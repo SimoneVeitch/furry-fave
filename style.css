@@ -3,12 +3,34 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 5rem;
+    color: #e5c9ae;
+}
+
+.bark {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 5rem;
+    color: #e5c9ae;
+}
+
 p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+    display: flex;
+}
+
 .logo {
-    width: 50px;
+    width: 20px;
     height: auto;
 }
 
