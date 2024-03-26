@@ -7,3 +7,15 @@ body {
     width: 50px;
     height: auto;
 }
+
+.card {
+    text-align: center;
+    border: black 1px;
+    display: flex;
+}
+
+.dog-image {
+    justify-self: center;
+    height: 12rem;
+    width: auto;
+}
