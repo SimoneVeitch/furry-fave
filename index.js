@@ -7,9 +7,10 @@ function renderOneDog(dog){
     <img src="${dog.image}" class="dog-image" />
     <h3>${dog.name} the ${dog.breed}</h3>
     <p>${dog.description}</p>
-    <p>${dog.likes} likes</p>
+    <p class="like">${dog.likes} likes</p>
     <button class="like-btn" data-id="${dog.id}">Like 🐾</button>
     `;
+    card.querySelector('.like-btn').addEventListener('click', handleLike);
     document.querySelector("#cards").appendChild(card);
 }
 
@@ -25,5 +26,34 @@ function initialise(){
     getAllDogs();
 }
 initialise();
+
+// Function to handle like button
+function handleLike(event) {
+    const dogId = event.target.dataset.id;
+    const card = event.target.parentElement;
+    const likesElement = card.querySelector('.like');
+    let likesCount = parseInt(likesElement.textContent);
+
+    // Increment likes count
+    likesCount++;
+
+    // Send PATCH request to update likes count
+    fetch(`http://localhost:3000/dogs/${dogId}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type':'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            likes: likesCount
+        })
+        })
+        .then(response => response.json())
+        .then(updatedDog => {
+            // Updates likes count in the DOM
+            likesElement.textContent = `${updatedDog.likes} likes`;
+        })
+        .catch(error => console.error("Error updating dog likes", error));
+    }
 
 })

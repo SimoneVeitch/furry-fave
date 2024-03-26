@@ -49,3 +49,8 @@ p {
     width: 6rem;
     margin-bottom: 2rem;
 }
+
+.like-btn:hover {
+    background-color: white;
+    color: #CFB294;
+}
