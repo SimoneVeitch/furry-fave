@@ -22,7 +22,12 @@ function renderOneDog(dog){
 function getAllDogs(){
     fetch('http://localhost:3000/dogs')
     .then (response => response.json())
-    .then (dogData => dogData.forEach(dog => renderOneDog(dog)))
+    .then (dogData => 
+        {dogData.forEach(dog => renderOneDog(dog));
+    // Find and set the most liked dog
+    mostLikedDog = dogData.reduce((prev, current) => (prev.likes > current.likes) ? prev : current);
+    renderMostLikedDog();
+})
     .catch (error => console.error("Error fetching dogs", error));
 }
 
@@ -100,5 +105,24 @@ function handleLike(event) {
         .then(dog => console.log(dog))
         .catch(error => console.error("Error adding dog", error));
     }
+
+    function renderMostLikedDog() {
+        const mostLikedDogContainer = document.querySelector("#most-liked-dog");
+        mostLikedDogContainer.innerHTML = "";
+        if (mostLikedDog) {
+            const name = document.createElement('p');
+            name.textContent = `${mostLikedDog.name} the ${mostLikedDog.breed}`;
+            name.className = 'most-liked-dog-name';
+            mostLikedDogContainer.appendChild(name);
+
+            const img = document.createElement('img');
+            img.src = mostLikedDog.image;
+            img.alt = `${mostLikedDog.name} the ${mostLikedDog.breed}`;
+            img.className = 'most-liked-dog-image';
+            mostLikedDogContainer.appendChild(img);
+        }
+    }
+    
+
 
 })

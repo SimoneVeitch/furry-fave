@@ -4,6 +4,14 @@ body {
     text-align: center;
 }
 
+#title {
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+
 h1 {
     font-family: "Kalam", cursive;
     font-weight: 700;
@@ -11,6 +19,7 @@ h1 {
     font-size: 60px;
     line-height: 5rem;
     color: #200c63;
+    z-index: 1;
 }
 
 .intro {
@@ -186,3 +195,20 @@ header {
   input[type=submit]:hover {
     background-color: #91a1e8;
   }
+
+.most-liked-dog-image {
+    justify-self: center;
+    border-radius: 46% 54% 64% 36% / 61% 44% 56% 39%;
+    height: 25rem;
+    width: auto;
+    margin-top: 2rem;
+}
+
+.most-liked-dog-name {
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: orange;
+}
+
