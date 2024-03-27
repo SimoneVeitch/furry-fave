@@ -7,32 +7,38 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Just+Another+Hand&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        </head>
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
     <body>
         <header>
         </header>
         <main>
             <section id="title">
-                <h1>Dog Cuteness<br>Show</h1>
-                <p>Your favourite event of the year is back, the <em>Dog Cuteness Show 2024.</em> Browse through this years' cute contestants or add your own dog for consideration.<br><br>Help our judges decide who should win <em>cutest dog of the year</em> by liking your favorite below.</p>
+                <h1>Dog Cuteness<br>Show 2024</h1>
+                <p class="intro">Your favourite event of the year is back, the <span class="orange">Dog Cuteness Show 2024.</span><br><br>Browse through this years' cute contestants or add your own dog for consideration.<br><br>Help our judges decide who should win  <span class="orange" >cutest dog of the year </span>  by liking your favorite below.</p>
+            </section>
+            <section id="break">
+                <img src="./Images/Blue_paw.png" alt="dog medal icon" />
             </section>
             <section id="contestants">
                 <div id="con_hi">
-                    <h3>Say <span class='bark'>WOOF!</span> to our contestants</h3>
+                    <h3>SAY <br><span class='bark'>WOOF!</span><br> TO OUR CONTESTANTS</h3>
                 </div>
                 <div id="cards">
 
                 </div>
+                <div id="most-liked-dog">
+                    
+                </div>
             </section>
             <section id="form">
                 <form class="dog-form">
-                    <h3>Add a contestant</h3>
+                    <h3>ADD A CONTESTANT</h3>
                     <input
                     type="text"
                     name="name"
                     value=""
-                    placeholder="Enter dog's name..."
+                    placeholder="Name..."
                     class="input-text"
                     />
                     <br />
@@ -40,13 +46,13 @@
                     type="text"
                     name="breed"
                     value=""
-                    placeholder="Enter dog's breed..."
+                    placeholder="Breed..."
                     class="input-text"
                     />
                     <br />
                     <textarea
                     name="description"
-                    placeholder="Enter dog's name..."
+                    placeholder="Description..."
                     class="input-text"
                     ></textarea>
                     <br />
@@ -54,7 +60,7 @@
                     type="text"
                     name="image"
                     value=""
-                    placeholder="Enter a dog's image URL..."
+                    placeholder="Image URL..."
                     class="input-text"
                     />
                     <br />

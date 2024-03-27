@@ -1,24 +1,62 @@
 body {
-    background-color: #A56E46;
+    background-color: #f3f2fd;
+    color: #200c63;
     text-align: center;
 }
 
 h1 {
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
+    font-family: "Kalam", cursive;
+    font-weight: 700;
     font-style: normal;
     font-size: 60px;
     line-height: 5rem;
-    color: #e5c9ae;
+    color: #200c63;
+}
+
+.intro {
+    margin-left: 12rem;
+    margin-right: 12rem;
+}
+
+#break {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#break img {
+    height: 60px;
 }
 
 .bark {
-    font-family: "Pacifico", cursive;
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;;
+    line-height: 5rem;
+    color: #200c63;
+}
+
+h3 {
+    font-family: "Kalam", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 50px;
-    line-height: 5rem;
-    color: #e5c9ae;
+    font-size: 30px;
+}
+
+.orange {
+        font-family: "Kalam", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        color: orange;
+}
+
+.like {
+        font-family: "Kalam", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+        color: orange;
 }
 
 p {
@@ -40,29 +78,49 @@ header {
 
 .card {
     text-align: center;
-    background-color: #e5c9ae;
+    background-color: #030847;
     padding: 1rem;
-    color: #4f300f;
-    width: 15rem;
+    color: #ffffff;
+    width: 25rem;
     height: 35rem;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px #62370c;
+    box-shadow: 3px 4px #6072d3;
     display: inline-grid;
-    border-radius: 46% 54% 64% 36% / 61% 44% 56% 39%;
+    border-radius: 10%;
 }
 
 .dog-image {
     justify-self: center;
     border-radius: 46% 54% 64% 36% / 61% 44% 56% 39%;
-    height: 10rem;
+    height: 15rem;
     width: auto;
     margin-top: 2rem;
 }
 
 
 .like-btn {
-    background-color: #CFB294;
-    color: white;
+    background-color: #91a1e8;
+    color: rgb(2, 3, 54);
+    position: relative;
+    border: none;
+    border-radius: 15px;
+    justify-self: center;
+    height: 2rem;
+    width: 6rem;
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.like-btn:hover {
+    background-color: white;
+    color: #1f095c;
+}
+
+.submit {
+    background-color: #91a1e8;
+    color: rgb(2, 3, 54);
     position: relative;
     border: none;
     border-radius: 15px;
@@ -72,7 +130,59 @@ header {
     margin-bottom: 2rem;
 }
 
-.like-btn:hover {
+.submit:hover {
     background-color: white;
-    color: #CFB294;
+    color: #1f095c;
 }
+
+#contestants {
+    margin-top: 70px;
+}
+
+#form {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #07197c;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 10px;
+    overflow: auto;
+    width: auto;
+    margin: 70px;
+    padding: 20px;
+    border-radius: 24px;
+  }
+  
+  input[type=text], select, textarea {
+    width: 50%; 
+    padding: 12px; 
+    border: none;
+    border-radius: 10px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #07197c;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+  }
+  
+  input[type=submit] {
+    background-color: #030847;
+    color: #ffffff;
+    position: relative;
+    border: none;
+    border-radius: 15px;
+    justify-self: center;
+    height: 2rem;
+    width: 6rem;
+    margin-bottom: 2rem;
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #91a1e8;
+  }

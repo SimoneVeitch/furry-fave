@@ -14,7 +14,7 @@
       "name": "Angus",
       "breed": "Shepherd Dog",
       "description": "Solid, muscular and robust, Angus is an athletic dog who loves to help his family on the farm. Playful and loyal, Angus is a great companion",
-      "likes": 2
+      "likes": 3
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "name": "Lassie",
       "breed": "Labrador Retriever",
       "description": "Loyal and intelligent, Lassie is a wonderful companion. Lassies is an active, friendly, loving dog, who is always wagging his tail",
-      "likes": 6
+      "likes": 7
     },
     {
       "id": "4",

@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+let mostLikedDog = null;
+
 // DOG CARD
 function renderOneDog(dog){
     const card = document.createElement('div');
@@ -8,11 +11,12 @@ function renderOneDog(dog){
     <h3>${dog.name} the ${dog.breed}</h3>
     <p>${dog.description}</p>
     <p class="like">${dog.likes} likes</p>
-    <button class="like-btn" data-id="${dog.id}">Like 🐾</button>
+    <button class="like-btn" data-id="${dog.id}">Like 🤍</button>
     `;
     card.querySelector('.like-btn').addEventListener('click', handleLike);
     document.querySelector("#cards").appendChild(card);
 }
+
 
 //Fetching dog data
 function getAllDogs(){
@@ -96,6 +100,5 @@ function handleLike(event) {
         .then(dog => console.log(dog))
         .catch(error => console.error("Error adding dog", error));
     }
-
 
 })
