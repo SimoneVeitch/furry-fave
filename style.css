@@ -1,22 +1,91 @@
-body {
-    background-color: #f3f2fd;
-    color: #200c63;
+body, html {
+    background-color: #fd96ef;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
     text-align: center;
 }
 
-#intro-section {
+li.navelement {
+   margin-right: 20px;
+   text-align: center;
+}
+
+.navigation li a {
+    text-decoration: none;
+    font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
+    color: #000000;
+}
+
+.navigation li a:hover {
+    color: #ec774c;
+}
+
+.logo img {
+    max-height: 30px;
+    max-width: auto;
+}
+
+#hero {
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0!important;
+    min-height: 0;
 }
 
 h1 {
-    font-family: "Kalam", cursive;
-    font-weight: 700;
+    font-family: "Ysabeau SC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+    font-size: 90px;
+    color: black;
+}
+
+.hero-btn {
+   position: absolute;
+   width: 150px;
+   height: 50px;
+   bottom: 0;
+   align-self: center;
+   background-color: #f800a5;
+   font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-style: normal;
-    font-size: 70px;
-    line-height: 5rem;
-    color: #200c63;
+    font-size: 18px;
+   color: #000000;
+   border: none;
+   cursor: pointer;
+   transition: transform 0.2s ease;
+}
+
+.hero-btn:active {
+    transform: scale(0.96);
 }
 
 .intro {
@@ -24,29 +93,32 @@ h1 {
     margin-right: 12rem;
 }
 
-#break {
-    margin-top: 50px;
-    margin-bottom: 50px;
+#contestants {
+    background-color: #4089e8;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
 }
 
-#break img {
-    height: 60px;
+#con-hi {
+    padding-top: 50px;
 }
 
 .bark {
-    font-family: "Kalam", cursive;
-    font-weight: 700;
+    font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-style: normal;
-    font-size: 60px;;
-    line-height: 5rem;
-    color: #200c63;
+    font-size: 30px;
+    color: black;
 }
 
 h3 {
-    font-family: "Kalam", cursive;
-    font-weight: 400;
+    font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-style: normal;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .orange {
@@ -58,66 +130,80 @@ h3 {
 }
 
 .like {
-        font-family: "Kalam", cursive;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 20px;
+    font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 18px;
         color: orange;
 }
 
 p {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-header {
-    display: flex;
-}
-
-.logo {
-    width: 20px;
-    height: auto;
+    font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
 }
 
 #cards {
-    margin: 2rem;
+    display: flex;
+    flex-wrap: nowrap; /* Ensure cards stay in a single row */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    gap: 20px;
 }
 
 .card {
     text-align: center;
-    background-color: #030847;
-    padding: 1rem;
-    color: #ffffff;
-    width: 25rem;
-    height: 40rem;
-    margin: 1rem 2rem;
-    box-shadow: 3px 4px #6072d3;
-    display: inline-grid;
-    border-radius: 10%;
+    flex: 0 0 auto; /* Prevent cards from growing */
+    scroll-snap-align: start; /* Align each card to the start of the scroll container */
+    width: 300px; /* Set a fixed width for each card */
+    border: 2px solid transparent; /* Transparent border initially */
+    transition: border-color 0.3s; /* Smooth border color transition */
 }
+
+.card:hover .dog-image {
+    border-color: #2a0db9;
+    border-width: 10px;
+  }
 
 .dog-image {
-    justify-self: center;
-    border-radius: 46% 54% 64% 36% / 61% 44% 56% 39%;
-    height: 15rem;
-    width: auto;
-    margin-top: 2rem;
+    width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
 }
 
-
-.like-btn {
-    background-color: #91a1e8;
-    color: rgb(2, 3, 54);
-    position: relative;
+.card-content {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .card-content h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  
+  .card-content p {
+    margin-bottom: 10px;
+  }
+  
+  .like-btn {
+    background-color: #f800a5;
+    color: black;
     border: none;
-    border-radius: 15px;
-    justify-self: center;
     height: 2rem;
     width: 6rem;
-    font-family: "Kalam", cursive;
-    font-weight: 400;
+    font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
     font-style: normal;
-    font-size: 15px;
-}
+    font-size: 18px;
+    cursor: pointer;
+  }
 
 .like-btn:hover {
     background-color: white;
@@ -191,16 +277,6 @@ header {
   
   input[type=submit]:hover {
     background-color: #91a1e8;
-  }
-
-  #shape {
-    width: 200px;
-    height: 200px;
-    background-color: #6072d3;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
 .most-liked-dog-image {
