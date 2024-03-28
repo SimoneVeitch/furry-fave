@@ -10,7 +10,7 @@ function renderOneDog(dog){
     <img src="${dog.image}" class="dog-image" />
     <h3>${dog.name} the ${dog.breed}</h3>
     <p>${dog.description}</p>
-    <p class="like">${dog.likes} likes</p>
+    <p class="like">${dog.likes === 1 ? '1 like' : `${dog.likes} likes`}</p>
     <button class="like-btn" data-id="${dog.id}">Like 🤍</button>
     `;
     card.querySelector('.like-btn').addEventListener('click', handleLike);

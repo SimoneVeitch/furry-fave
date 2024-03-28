@@ -14,7 +14,7 @@
       "name": "Angus",
       "breed": "Shepherd Dog",
       "description": "Solid, muscular and robust, Angus is an athletic dog who loves to help his family on the farm. Playful and loyal, Angus is a great companion",
-      "likes": 3
+      "likes": 8
     },
     {
       "id": "3",
@@ -46,7 +46,7 @@
       "breed": "Cavapoo",
       "description": "Coco is affectionate and intelligent, energetic and full of fun",
       "image": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2023-01/Hero%20Cavapoo%201.jpg",
-      "likes": 1
+      "likes": 3
     }
   ]
 }

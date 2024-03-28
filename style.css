@@ -4,22 +4,19 @@ body {
     text-align: center;
 }
 
-#title {
-    position: relative;
-    overflow: hidden;
+#intro-section {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 h1 {
     font-family: "Kalam", cursive;
     font-weight: 700;
     font-style: normal;
-    font-size: 60px;
+    font-size: 70px;
     line-height: 5rem;
     color: #200c63;
-    z-index: 1;
 }
 
 .intro {
@@ -91,7 +88,7 @@ header {
     padding: 1rem;
     color: #ffffff;
     width: 25rem;
-    height: 35rem;
+    height: 40rem;
     margin: 1rem 2rem;
     box-shadow: 3px 4px #6072d3;
     display: inline-grid;
@@ -196,12 +193,23 @@ header {
     background-color: #91a1e8;
   }
 
+  #shape {
+    width: 200px;
+    height: 200px;
+    background-color: #6072d3;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .most-liked-dog-image {
     justify-self: center;
     border-radius: 46% 54% 64% 36% / 61% 44% 56% 39%;
     height: 25rem;
     width: auto;
     margin-top: 2rem;
+    margin-bottom: 0%;
 }
 
 .most-liked-dog-name {
@@ -211,4 +219,3 @@ header {
     font-size: 30px;
     color: orange;
 }
-
