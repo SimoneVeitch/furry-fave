@@ -47,6 +47,22 @@
       "description": "Coco is affectionate and intelligent, energetic and full of fun",
       "image": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2023-01/Hero%20Cavapoo%201.jpg",
       "likes": 3
+    },
+    {
+      "id": "7004",
+      "name": "",
+      "breed": "",
+      "description": "",
+      "image": "",
+      "likes": 0
+    },
+    {
+      "id": "1348",
+      "name": "",
+      "breed": "",
+      "description": "",
+      "image": "",
+      "likes": 0
     }
   ]
 }

@@ -3,15 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
 let mostLikedDog = null;
 
 // DOG CARD
-function renderOneDog(dog){
+function renderOneDog(dog) {
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
-    <img src="${dog.image}" class="dog-image" />
-    <h3>${dog.name} the ${dog.breed}</h3>
-    <p>${dog.description}</p>
-    <p class="like">${dog.likes} likes</p>
-    <button class="like-btn" data-id="${dog.id}">Like 🤍</button>
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="${dog.image}" class="dog-image" />
+            </div>
+            <div class="card-back">
+                <h3>${dog.name} the ${dog.breed}</h3>
+                <p>${dog.description}</p>
+                <p class="like">${dog.name} currently has ${dog.likes} likes</p>
+            </div>
+        </div>
+        <button class="like-btn" data-id="${dog.id}">Like</button>
     `;
     card.querySelector('.like-btn').addEventListener('click', handleLike);
     document.querySelector("#cards").appendChild(card);
@@ -109,19 +115,18 @@ function handleLike(event) {
         const mostLikedDogContainer = document.querySelector("#most-liked-dog");
         mostLikedDogContainer.innerHTML = "";
         if (mostLikedDog) {
-            const name = document.createElement('p');
-            name.textContent = `${mostLikedDog.name} the ${mostLikedDog.breed}`;
-            name.className = 'most-liked-dog-name';
-            mostLikedDogContainer.appendChild(name);
-
             const img = document.createElement('img');
             img.src = mostLikedDog.image;
             img.alt = `${mostLikedDog.name} the ${mostLikedDog.breed}`;
             img.className = 'most-liked-dog-image';
             mostLikedDogContainer.appendChild(img);
+
+            const name = document.createElement('p');
+            name.textContent = `${mostLikedDog.name} the ${mostLikedDog.breed}`;
+            name.className = 'most-liked-dog-name';
+            mostLikedDogContainer.appendChild(name);
         }
     }
-
 
 
 })

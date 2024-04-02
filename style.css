@@ -1,12 +1,8 @@
 body, html {
     background-color: #fd96ef;
     height: 100vh;
-}
-
-h1,
-p,
-h3 {
     margin: 0;
+    padding: 0;
 }
 
 .header {
@@ -50,112 +46,11 @@ li.navelement {
 }
 
 #hero {
-    display: grid;
-  grid-template-columns: 2fr 1fr;
   align-items: center;
   justify-items: center;
-  padding-bottom: 4vmin;
-  height: 100%;
-  width: 100%;
   background: #fd96ef;
   color: #000000;
 }
-
-.title {
-    padding-left: 1em;
-    grid-column: 1 / -1;
-    grid-row: 1;
-    font-family: "Ysabeau SC", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
-    font-size: 90px;
-    color: black;
-    width: 100%;
-    z-index: 2;
-    text-align:center
-}
-
-.title-inner {
-    display: inline-block;
-  }
-
-@keyframes text-clip {
-  from {
-    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-  }
-  to {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-
-@keyframes outer-left {
-  from {
-    transform: translateX(50%);
-  }
-  to {
-    transform: none;
-  }
-}
-
-@keyframes inner-left {
-  from {
-    transform: translateX(-50%);
-  }
-  to {
-    transform: none;
-  }
-}
-
-.furry,
-.year {
-  animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-  // outline: 1px solid red;
-}
-
-// [class*='inner'] {
-//   outline: 1px solid blue;
-// }
-
-.title-inner {
-  display: inline-block;
-  animation: inner-left 1s 1s ease both;
-}
-
-.furry-inner {
-  display: inline-block;
-  animation: inner-left 1s 1s ease both,
-    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-}
-
-.year-inner {
-  animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-}
-
-.title {
-  animation: outer-left 1s 1s ease both;
-}
-
-.furry {
-  // start
-  > .cafe-inner {
-    display: inline-block;
-  }
-}
-
-.year {
-  display: inline-block;
-}
-
-@keyframes image-in {
-    from {
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-    to {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-  }
-  
 
 h1 {
     font-family: "Ysabeau SC", sans-serif;
@@ -164,14 +59,22 @@ h1 {
   font-style: normal;
     font-size: 90px;
     color: black;
+    text-align: center;
+    margin: 10px;
+}
+
+#intro {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .hero-btn {
    width: 150px;
    height: 50px;
-   margin-top: auto;
    bottom: 0;
-   align-self: center;
+   margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Make the button a block-level element */
+   text-align: center;
    background-color: #f800a5;
    font-family: "Ysabeau SC", sans-serif;
     font-optical-sizing: auto;
@@ -189,19 +92,32 @@ h1 {
 }
 
 #contestants {
-    background-color: #f8b73e;
+    background-color: #f7ae56;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .bark {
     font-family: "Ysabeau SC", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 30px;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+    font-size: 60px;
     color: black;
+    text-align: center;
+}
+
+h2 {
+        font-family: "Ysabeau SC", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 900;
+      font-style: normal;
+        font-size: 60px;
+        color: black;
+        text-align: center;
 }
 
 h3 {
@@ -214,57 +130,103 @@ h3 {
 
 p {
     font-family: "Ysabeau SC", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 #cards {
+    padding-top: 15px;
+    padding-bottom: 0; /* Remove the padding */
+}
+
+.card-gallery {
     display: flex;
-    flex-wrap: nowrap; /* Ensure cards stay in a single row */
-    overflow-x: auto; /* Allow horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    min-height: 400px;
     gap: 20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+.card-gallery::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, Opera */
 }
 
 .card {
     text-align: center;
-    flex: 0 0 auto; /* Prevent cards from growing */
-    scroll-snap-align: start; /* Align each card to the start of the scroll container */
-    width: 300px; /* Set a fixed width for each card */
-    border: 2px solid transparent; /* Transparent border initially */
-    transition: border-color 0.3s; /* Smooth border color transition */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 300px;
+    height: 300px;
 }
 
-.card:hover .dog-image {
-    border-color: #2a0db9;
-  }
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back {
+    background-color: #f2c3e7;
+    color: #000000;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.card-back h3 {
+    font-size: 30px;
+}
+
+.card-back p {
+    font-family: "Ysabeau SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.card-back .like {
+    font-style: italic;
+}
 
 .dog-image {
     width: 100%;
-  height: auto;
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
+    height: 100%;
+    object-fit: cover;
 }
 
-.card-content {
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 0 0 10px 10px;
-  }
-  
-  .card-content h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
-  }
-  
-  .card-content p {
-    margin-bottom: 10px;
-  }
-  
-  .like-btn {
-    background-color: #f800a5;
+.like {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.like-btn {
+    display: block;
+    margin: 10px auto;
+    background-color: #f2c3e7;
     color: black;
     border: none;
     height: 2rem;
@@ -275,7 +237,7 @@ p {
     font-style: normal;
     font-size: 18px;
     cursor: pointer;
-  }
+}
 
 .like-btn:hover {
     background-color: white;
@@ -283,31 +245,22 @@ p {
 }
 
 #leader {
-    background-color: #4566e7;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
 }
 
-.submit:hover {
-    background-color: white;
-    color: #1f095c;
-}
-
-
 #form {
-    font-family: "Ysabeau SC", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    padding: 10px;
     overflow: auto;
     width: auto;
-    margin: 70px;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
+    background-color: #f7ae56;
+  }
+
+  #form p {
+    padding-top: 0;
+    padding-bottom: 20px;
   }
   
   input[type=text], select, textarea {
@@ -330,13 +283,14 @@ p {
     background-color: #f800a5;
     color: black;
     border: none;
-    height: 2rem;
-    width: 6rem;
+    width: 150px;
+   height: 50px;
     font-family: "Ysabeau SC", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    font-size: 15px;
+    font-size: 18px;
+    text-align: center;
     cursor: pointer;
   }
   
@@ -349,7 +303,6 @@ p {
     height: 25rem;
     width: auto;
     margin-top: 2rem;
-    margin-bottom: 0%;
 }
 
 .most-liked-dog-name {
@@ -358,7 +311,7 @@ p {
     font-weight: 300;
     font-style: normal;
     font-size: 30px;
-    color: #ffffff;
+    color: #000000;
 }
 
 footer {

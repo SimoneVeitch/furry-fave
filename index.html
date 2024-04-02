@@ -14,43 +14,38 @@
     <ul class="navigation">
         <li class="navelement"><a href="#hero">Home</a></li>
         <li class="navelement"><a href="#contestants">Contestants</a></li>
+        <li class="navelement"><a href="#form">Submit a dog</a></li>
     </ul>
     <div class="logo">
         <img src="./Images/dog_logo.png" alt="Logo of dog"/>
     </div>  
 </header>
     <body>
-        <section>
-            <div id="hero">
-                <div class="title">
-                    <div class="title-inner">
-                        <div class="furry">
-                            <div class="furry-inner">FURRY FAVE</div>
-                            <br>
-                            <div class="year">
-                                <div id="year-inner">2024</div>
-                            </div>
-            </div>
-            </div>
-        </div>
-            <button class="hero-btn">ADD DOG</button>
-        </div>
+        <section id="hero">
+            <h1 data-text="FURRY FAVE 2024">FURRY FAVE<br>2024</div>
+                <div id="intro">
+                    <p>Your favorite event of the year is back, <em>Furry Fave 2024</em>.</p>
+                    <p>Help our judges decide who should win <em>Furry Fave 2024</em> by liking your favourite dog below, or add your own furry friend to the competition</p>
+                </div>
+        </section>
+        <section id="button">
+            <button class="hero-btn">Submit a dog</button>
         </section>
             <section id="contestants">
-                    <p>SAY <span class='bark'>WOOF!</span> TO OUR CONTESTANTS</p>
-                <div id="cards">
+            <h3>SAY <span class='bark'>WOOF!</span> TO OUR CONTESTANTS</h3>
+            <div id="cards" class="card-gallery">
                 </div>
-                <br>
-                <h1>Leaderboard</h1>
+            </div>   
                 </section>
                 <section id="leader">
                 <p>The dog with the most likes to date is:</p>
                 <div id="most-liked-dog">
                 </div>
+                <div class="border"></div>
             </section>
             <section id="form">
                 <form class="dog-form">
-                    <h3>ADD A CONTESTANT</h3>
+                    <h2>SUBMIT A DOG</h2>
                     <p>Add your own Furry Fave as a contestant by entering their details below</p>
                     <input
                     type="text"
