@@ -63,6 +63,22 @@
       "description": "",
       "image": "",
       "likes": 0
+    },
+    {
+      "id": "4e32",
+      "name": "Moonlight",
+      "breed": "Alaskan Malamute",
+      "description": "Nice dog",
+      "image": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2024-03/Alaskan%20Malamute1.jpg",
+      "likes": 0
+    },
+    {
+      "id": "afe9",
+      "name": "Test",
+      "breed": "Cavapoo",
+      "description": "Test",
+      "image": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2024-03/Alaskan%20Malamute1.jpg",
+      "likes": 0
     }
   ]
 }

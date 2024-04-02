@@ -147,4 +147,13 @@ function handleLike(event) {
         menuToggle.classList.toggle('open'); // Toggle the 'open' class on the menu toggle bars
     });
     
+    const form = document.querySelector('.dog-form');
+const thankYouMessage = document.querySelector('.thank-you');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting
+    form.style.display = 'none'; // Hide the form
+    thankYouMessage.style.display = 'block'; // Show the thank you message
+})
+
 })
