@@ -17,7 +17,6 @@ function renderOneDog(dog){
     document.querySelector("#cards").appendChild(card);
 }
 
-
 //Fetching dog data
 function getAllDogs(){
     fetch('http://localhost:3000/dogs')
@@ -122,7 +121,7 @@ function handleLike(event) {
             mostLikedDogContainer.appendChild(img);
         }
     }
-    
+
 
 
 })

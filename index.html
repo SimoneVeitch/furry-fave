@@ -7,8 +7,6 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Syne:wght@800&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Inclusive+Sans:ital@0;1&family=Moirai+One&family=Syne:wght@800&family=Ysabeau+SC:wght@300&display=swap" rel="stylesheet">
   </head>
@@ -22,20 +20,30 @@
     </div>  
 </header>
     <body>
-            <section id="hero">
-                <div id="title">
-                <h1>FURRY FAVE<br>2024</h1>
+        <section>
+            <div id="hero">
+                <div class="title">
+                    <div class="title-inner">
+                        <div class="furry">
+                            <div class="furry-inner">FURRY FAVE</div>
+                            <br>
+                            <div class="year">
+                                <div id="year-inner">2024</div>
+                            </div>
             </div>
+            </div>
+        </div>
             <button class="hero-btn">ADD DOG</button>
+        </div>
         </section>
             <section id="contestants">
-                <div id="con_hi">
                     <p>SAY <span class='bark'>WOOF!</span> TO OUR CONTESTANTS</p>
-                </div>
                 <div id="cards">
                 </div>
                 <br>
                 <h1>Leaderboard</h1>
+                </section>
+                <section id="leader">
                 <p>The dog with the most likes to date is:</p>
                 <div id="most-liked-dog">
                 </div>
@@ -43,6 +51,7 @@
             <section id="form">
                 <form class="dog-form">
                     <h3>ADD A CONTESTANT</h3>
+                    <p>Add your own Furry Fave as a contestant by entering their details below</p>
                     <input
                     type="text"
                     name="name"
@@ -82,7 +91,10 @@
                 </form>
             </section>
             <footer>
-
+                <p>Copyright 2024</p>
+                <div class="logo">
+                    <img src="./Images/dog_logo.png" alt="Logo of dog"/>
+                </div>  
             </footer>
         <script src="index.js"></script>
     </body>
