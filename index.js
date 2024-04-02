@@ -128,5 +128,23 @@ function handleLike(event) {
         }
     }
 
+    const submitDogButton = document.querySelector('.hero-btn');
+    const formSection = document.querySelector('#form');
 
+    // Function to scroll to the form section
+    function scrollToForm() {
+        formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Add click event listener to the button
+    submitDogButton.addEventListener('click', scrollToForm);
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.navigation');
+    
+    menuToggle.addEventListener('click', () => {
+        navigation.classList.toggle('open'); // Toggle the 'open' class on the navigation
+        menuToggle.classList.toggle('open'); // Toggle the 'open' class on the menu toggle bars
+    });
+    
 })
