@@ -1,8 +1,9 @@
 body, html {
-    background-color: #fd96ef;
+    background-color: #f8acee;
     height: 100vh;
     margin: 0;
     padding: 0;
+    cursor: url("./Images/Paw_Cursor.png"), auto, default;
 }
 
 .header {
@@ -10,14 +11,14 @@ body, html {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #fd96ef;
+    background-color: #f8acee;
     position: sticky;
     top: 0;
     z-index: 1000; /* Ensure it appears above other content */
 }
 
 .sticky {
-    background-color: #fd96ef; /* Change the background color on scroll */
+    background-color: #f8acee; /* Change the background color on scroll */
 }
 
 .navigation {
@@ -56,7 +57,7 @@ li.navelement {
 #hero {
   align-items: center;
   justify-items: center;
-  background: #fd96ef;
+  background: #f8acee;
   color: #000000;
 }
 
@@ -83,24 +84,25 @@ h1 {
    margin: 0 auto; /* Center the button horizontally */
     display: block; /* Make the button a block-level element */
    text-align: center;
-   background-color: #f800a5;
+   background-color: #407a60;
    font-family: "Ysabeau SC", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     font-size: 18px;
-   color: #000000;
+   color: #d3f2e4;
    border: none;
    cursor: pointer;
-   transition: transform 0.2s ease;
+   border-radius: 10px 10px 0px 0px;
 }
 
-.hero-btn:active {
-    transform: scale(0.96);
+.hero-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
 }
 
 #contestants {
-    background-color: #f7ae56;
+    background-color: #86c1a0;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
@@ -114,8 +116,12 @@ h1 {
   font-weight: 900;
   font-style: normal;
     font-size: 60px;
-    color: black;
+    color: #d3f2e4;
     text-align: center;
+}
+
+#contestants h3 {
+    color: #d3f2e4;
 }
 
 h2 {
@@ -145,6 +151,8 @@ p {
 
 #cards {
     padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px; /* Add padding to the right */
     padding-bottom: 0; /* Remove the padding */
 }
 
@@ -161,6 +169,10 @@ p {
 
 .card-gallery::-webkit-scrollbar {
     display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+}
+
+.card:first-child {
+    padding-left: 20px;
 }
 
 .card {
@@ -197,14 +209,15 @@ p {
 }
 
 .card-back {
-    background-color: #f2c3e7;
-    color: #000000;
+    background-color: #547c6b;
+    color: #d3f2e4;
     text-align: center;
     transform: rotateY(180deg);
+    border-radius: 10px;
 }
 
 .card-back h3 {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .card-back p {
@@ -213,7 +226,7 @@ p {
     font-weight: 300;
     font-style: normal;
     font-size: 15px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .card-back .like {
@@ -224,6 +237,7 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .like {
@@ -234,8 +248,8 @@ p {
 .like-btn {
     display: block;
     margin: 10px auto;
-    background-color: #f2c3e7;
-    color: black;
+    background-color: #407a60;
+    color: #d3f2e4;
     border: none;
     height: 2rem;
     width: 6rem;
@@ -245,25 +259,27 @@ p {
     font-style: normal;
     font-size: 18px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .like-btn:hover {
     background-color: white;
-    color: #1f095c;
+    color: #000000;
 }
 
 #leader {
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
+    overflow: hidden;
 }
 
 #form {
     overflow: auto;
     width: auto;
-    padding: 5px;
     text-align: center;
-    background-color: #f7ae56;
+    background-color: #86c1a0;
+    padding-bottom: 15px;
   }
 
   #form p {
@@ -285,11 +301,12 @@ p {
     font-size: 15px;
     letter-spacing: 0.5px;
     line-height: 20px;
+    border-radius: 10px;
   }
   
   input[type=submit] {
-    background-color: #f800a5;
-    color: black;
+    background-color: #407a60;
+    color: #d3f2e4;
     border: none;
     width: 150px;
    height: 50px;
@@ -300,17 +317,18 @@ p {
     font-size: 18px;
     text-align: center;
     cursor: pointer;
+    border-radius: 10px;
   }
   
   input[type=submit]:hover {
-    background-color: #ffffff
+    background-color: #ffffff;
   }
 
 .most-liked-dog-image {
     justify-self: center;
-    height: 25rem;
+    height: 300px;
+    border-radius: 10px;
     width: auto;
-    margin-top: 2rem;
 }
 
 .most-liked-dog-name {
@@ -324,9 +342,9 @@ p {
 
 footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fd96ef;
+    justify-content: space-between;
+    background-color: #f8acee;
+    padding-left: 15px;
 }
 
 footer img {
@@ -373,3 +391,56 @@ footer img {
         transform: rotate(45deg) translate(-5px, -5px);
     }
 }
+
+.confetti-container {
+    position: relative; /* Ensure the confetti stays within this container */
+}
+
+.confetti {
+    width: 15px;
+    height: 15px;
+    background-color: #f2d74e;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    animation: confetti 4.5s ease-in-out infinite;
+    transform-origin: left top;
+  }
+  .confetti:nth-child(1) {
+    background-color: #f2d74e; left: 10%; animation-delay: 0;
+  }
+  .confetti:nth-child(2) {
+    background-color: #95c3de; left: 20%; animation-delay: -5s;
+  }
+  .confetti:nth-child(3) {
+    background-color: #ff9a91; left: 30%; animation-delay: -3s;
+  }
+  .confetti:nth-child(4) {
+    background-color: #f2d74e; left: 40%; animation-delay: -2.5s;
+  }
+  .confetti:nth-child(5) {
+    background-color: #95c3de; left: 50%; animation-delay: -4s;
+  }
+  .confetti:nth-child(6) {
+    background-color: #ff9a91; left: 60%; animation-delay: -6s;
+  }
+  .confetti:nth-child(7) {
+    background-color: #f2d74e; left: 70%; animation-delay: -1.5s;
+  }
+  .confetti:nth-child(8) {
+    background-color: #95c3de; left: 80%; animation-delay: -2s;
+  }
+  .confetti:nth-child(9) {
+    background-color: #ff9a91; left: 90%; animation-delay: -3.5s;
+  }
+  .confetti:nth-child(10) {
+    background-color: #f2d74e; left: 100%; animation-delay: -2.5s;
+  }
+
+  @keyframes confetti {
+    0% { transform: rotateZ(15deg) rotateY(0deg) translate(0,0); }
+    25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw,20vh); }
+    50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw,60vh); }
+    75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
+    100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
+  }

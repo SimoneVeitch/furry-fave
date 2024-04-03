@@ -6,7 +6,7 @@
       "name": "Vanilla",
       "breed": "Cocker Spaniel",
       "description": "Vanilla is a merry and busy little dog. Profuse and glamorous,  she is an intelligent dog who loves her family",
-      "likes": 5
+      "likes": 7
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "name": "Angus",
       "breed": "Shepherd Dog",
       "description": "Solid, muscular and robust, Angus is an athletic dog who loves to help his family on the farm. Playful and loyal, Angus is a great companion",
-      "likes": 8
+      "likes": 10
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "name": "Lassie",
       "breed": "Labrador Retriever",
       "description": "Loyal and intelligent, Lassie is a wonderful companion. Lassies is an active, friendly, loving dog, who is always wagging his tail",
-      "likes": 7
+      "likes": 8
     },
     {
       "id": "4",
@@ -30,7 +30,7 @@
       "name": "Dottie",
       "breed": "Dalmatian",
       "description": "Dottie is friendly and outgoing. She is dedicated and loyal, enjoys company and is always clowning about ",
-      "likes": 3
+      "likes": 7
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "name": "Bob",
       "breed": "Bulldog",
       "description": "Bob is tenacious and courageous, but also very goofy. He is highly affectionate and kind, and loves to nap and eat",
-      "likes": 6
+      "likes": 11
     },
     {
       "id": "7031",
@@ -46,39 +46,7 @@
       "breed": "Cavapoo",
       "description": "Coco is affectionate and intelligent, energetic and full of fun",
       "image": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2023-01/Hero%20Cavapoo%201.jpg",
-      "likes": 3
-    },
-    {
-      "id": "7004",
-      "name": "",
-      "breed": "",
-      "description": "",
-      "image": "",
-      "likes": 0
-    },
-    {
-      "id": "1348",
-      "name": "",
-      "breed": "",
-      "description": "",
-      "image": "",
-      "likes": 0
-    },
-    {
-      "id": "4e32",
-      "name": "Moonlight",
-      "breed": "Alaskan Malamute",
-      "description": "Nice dog",
-      "image": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2024-03/Alaskan%20Malamute1.jpg",
-      "likes": 0
-    },
-    {
-      "id": "afe9",
-      "name": "Test",
-      "breed": "Cavapoo",
-      "description": "Test",
-      "image": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2024-03/Alaskan%20Malamute1.jpg",
-      "likes": 0
+      "likes": 6
     }
   ]
 }

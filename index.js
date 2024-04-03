@@ -14,7 +14,7 @@ function renderOneDog(dog) {
             <div class="card-back">
                 <h3>${dog.name} the ${dog.breed}</h3>
                 <p>${dog.description}</p>
-                <p class="like">${dog.name} currently has ${dog.likes} likes</p>
+                <p class="like">${dog.likes} likes</p>
             </div>
         </div>
         <button class="like-btn" data-id="${dog.id}">Like</button>
@@ -46,7 +46,7 @@ function handleLike(event) {
     const dogId = event.target.dataset.id;
     const card = event.target.parentElement;
     const likesElement = card.querySelector('.like');
-    let likesCount = parseInt(likesElement.textContent);
+    let likesCount = parseInt(likesElement.textContent.match(/\d+/)[0]);
 
     // Increment likes count
     likesCount++;
@@ -155,5 +155,24 @@ form.addEventListener('submit', function (event) {
     form.style.display = 'none'; // Hide the form
     thankYouMessage.style.display = 'block'; // Show the thank you message
 })
+
+const textarea = document.querySelector('textarea');
+
+textarea.addEventListener('input', function() {
+    if (this.value.length > 100) {
+        this.value = this.value.substring(0, 100); // Limit the text to 100 characters
+    }
+});
+
+const container = document.querySelector('.confetti-container');
+
+// Number of confetti pieces to add
+const numConfetti = 30;
+
+for (let i = 0; i < numConfetti; i++) {
+    const confetti = document.createElement('div');
+    confetti.classList.add('confetti');
+    container.appendChild(confetti);
+}
 
 })
