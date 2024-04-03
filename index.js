@@ -115,16 +115,16 @@ function handleLike(event) {
         const mostLikedDogContainer = document.querySelector("#most-liked-dog");
         mostLikedDogContainer.innerHTML = "";
         if (mostLikedDog) {
+            const name = document.createElement('p');
+            name.textContent = `${mostLikedDog.name} the ${mostLikedDog.breed}`;
+            name.className = 'most-liked-dog-name';
+            mostLikedDogContainer.appendChild(name);
+            
             const img = document.createElement('img');
             img.src = mostLikedDog.image;
             img.alt = `${mostLikedDog.name} the ${mostLikedDog.breed}`;
             img.className = 'most-liked-dog-image';
             mostLikedDogContainer.appendChild(img);
-
-            const name = document.createElement('p');
-            name.textContent = `${mostLikedDog.name} the ${mostLikedDog.breed}`;
-            name.className = 'most-liked-dog-name';
-            mostLikedDogContainer.appendChild(name);
         }
     }
 
@@ -174,5 +174,7 @@ for (let i = 0; i < numConfetti; i++) {
     confetti.classList.add('confetti');
     container.appendChild(confetti);
 }
+
+
 
 })
