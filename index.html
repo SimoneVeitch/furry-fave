@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Phase 1 Project</title>
+        <title>Furry Faves</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Open+Sans:ital,wght@0,300;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     </head>
+
   <header class="header">
     <div class="menu-toggle">
         <div class="bar"></div>
@@ -24,102 +25,107 @@
         <li class="navelement"><a href="#form">Submit a dog</a></li>
     </ul>
     <div class="logo">
-        <img src="./Images/dog_logo.png" alt="Logo of dog" style="filter: invert(36%) sepia(7%) saturate(1282%) hue-rotate(136deg) brightness(93%) contrast(87%);"/>
+        <img src="./Images/dog_logo.png" alt="Dog logo" style="filter: invert(36%) sepia(7%) saturate(1282%) hue-rotate(136deg) brightness(93%) contrast(87%);"/>
     </div>  
 </header>
-    <body>
-        <section id="hero">
-            <div class="background"></div>
-            <h1 data-text="FURRY FAVE 2024">FURRY FAVE<br>2024</div>
-                <div class="medal">
-                    <img src="./Images/noun-badge-pet-465367.png" alt="Dog medal" class="medal-img"/>
-                </div> 
-        </section>
-        <section id="button">
-            <button class="hero-btn">Submit a dog</button>
-        </section>
-        <div id="intro">
-            <p>Your favorite event of the year is back, <em>Furry Fave 2024</em>.</p>
-            <p>Help our judges decide who should win <em>Furry Fave 2024</em> by liking your favourite dog below, or add your own furry friend to the competition</p>
-        </div>
-            <section id="contestants">
-                <div class="container">
-                    <div class="text"></div>
-            <h2><span class='bark'>CONTESTANTS</span></h2>
-        </div>
+
+<body>
+    
+    <section id="hero">
+        <h1 data-text="FURRY FAVE 2024">FURRY FAVE<br>2024</div>
+            <div class="medal">
+                <img src="./Images/noun-badge-pet-465367.png" alt="Dog medal" class="medal-img"/>
+            </div> 
+    </section>
+
+    <section id="button">
+        <button class="hero-btn">Submit a dog</button>
+    </section>
+
+    <section id="intro">
+        <p>Your favorite event of the year is back, <em>Furry Fave 2024</em>.</p>
+        <p>Help our judges decide who should win <em>Furry Fave 2024</em> by liking your favourite dog below, or add your own furry friend to the competition</p>
+    </section>
+
+    <section id="contestants">
+        <h2><span class='bark'>CONTESTANTS</span></h2>
         <div class="heart">
             <img src="./Images/noun-footprint-3974617.png" alt="dog heart paw"/>
             <img src="./Images/noun-footprint-3974617.png" alt="dog heart paw"/>
         </div>
+        <div id="cards" class="card-gallery">
         </div>
-            <div id="cards" class="card-gallery">
-                </div>
-                </section>
-                <section id="leader">
-                <div class="confetti-container">
-                    <div class="confetti"></div>
-                    <h2>LEADING PUPPY</h2>
-                <div id="most-liked-dog">
-                </div>
-                <div class="border"></div>
+    </section>
+
+    <section id="leader">
+        <div class="confetti-container">
+            <div class="confetti"></div>
+            <h2>LEADING PUPPY</h2>
+            <div id="most-liked-dog">
             </div>
-            </section>
-            <section id="form">
-                <form class="dog-form">
-                    <h2>SUBMIT A DOG</h2>
-                    <p>Add your own Furry Fave as a contestant by entering their details below</p>
-                    <div class="dog-tongue">
-                        <img src="./Images/noun-shiba-tongue-4701681.png" alt="dog poking tongue icon"/>
-                    </div>
-                    <input
-                    type="text"
-                    name="name"
-                    value=""
-                    placeholder="Name..."
-                    class="input-text"
-                    />
-                    <br />
-                    <input
-                    type="text"
-                    name="breed"
-                    value=""
-                    placeholder="Breed..."
-                    class="input-text"
-                    />
-                    <br />
-                    <textarea
-                    name="description"
-                    placeholder="Description..."
-                    class="input-text"
-                    maxlength="100"
-                    ></textarea>
-                    <br />
-                    <input
-                    type="text"
-                    name="image"
-                    value=""
-                    placeholder="Image URL..."
-                    class="input-text"
-                    />
-                    <br />
-                    <input
-                    type="submit"
-                    name="submit"
-                    value="Add dog"
-                    class="submit"
-                    />
-                </form>
-                <div class="thank-you" style="display: none;">
-                    <h2>Thank you for submitting!</h2>
-                    <p>Your dog has been added to the contest.</p>
-                </div>
-            </section>
-            <footer>
-                <p>Copyright 2024</p>
-                <div class="logo">
-                    <img src="./Images/dog_logo.png" alt="Logo of dog" style="filter: invert(36%) sepia(7%) saturate(1282%) hue-rotate(136deg) brightness(93%) contrast(87%);"/>
-                </div>  
-            </footer>
-        <script src="index.js"></script>
-    </body>
+        </div>
+    </section>
+
+    <section id="form">
+        <form class="dog-form">
+            <h2>SUBMIT A DOG</h2>
+            <p>Add your own Furry Fave as a contestant by entering their details below</p>
+            <div class="dog-tongue">
+                <img src="./Images/noun-shiba-tongue-4701681.png" alt="dog poking tongue icon"/>
+            </div>
+            <input
+                type="text"
+                name="name"
+                value=""
+                placeholder="Name..."
+                class="input-text"
+                 />
+            <br />
+            <input
+                type="text"
+                name="breed"
+                value=""
+                placeholder="Breed..."
+                class="input-text"
+                />
+            <br />
+            <textarea
+                name="description"
+                placeholder="Description (100 characters max)..."
+                class="input-text"
+                maxlength="100"
+                ></textarea>
+            <br />
+            <input
+                type="text"
+                name="image"
+                value=""
+                placeholder="Image URL (png or jpg)..."
+                class="input-text"
+                 />
+            <br />
+            <input
+                type="submit"
+                name="submit"
+                value="Add dog"
+                class="submit"
+                />
+        </form>
+        <div class="thank-you" style="display: none;">
+            <h2>Thank you for submitting!</h2>
+            <p>Your dog has been added to the contest.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright 2024</p>
+        <div class="logo">
+            <img src="./Images/dog_logo.png" alt="Logo of dog" style="filter: invert(36%) sepia(7%) saturate(1282%) hue-rotate(136deg) brightness(93%) contrast(87%);"/>
+        </div>  
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
 </html>

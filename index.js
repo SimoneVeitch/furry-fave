@@ -2,7 +2,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let mostLikedDog = null;
 
-// DOG CARD
+// Scroll to form when click on hero button
+const submitDogButton = document.querySelector('.hero-btn');
+const formSection = document.querySelector('#form');
+
+function scrollToForm() {
+    formSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+submitDogButton.addEventListener('click', scrollToForm);
+
+// Update to burger menu on mobile
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('.navigation');
+    
+menuToggle.addEventListener('click', () => {
+    navigation.classList.toggle('open'); // Toggle the 'open' class on the navigation
+    menuToggle.classList.toggle('open'); // Toggle the 'open' class on the menu toggle bars
+ });
+
+// Render dog cards
 function renderOneDog(dog) {
     const card = document.createElement('div');
     card.className = 'card';
@@ -23,7 +43,7 @@ function renderOneDog(dog) {
     document.querySelector("#cards").appendChild(card);
 }
 
-//Fetching dog data
+//Fetch data
 function getAllDogs(){
     fetch('http://localhost:3000/dogs')
     .then (response => response.json())
@@ -51,8 +71,8 @@ function handleLike(event) {
     // Increment likes count
     likesCount++;
 
-    // Send PATCH request to update likes count
-    fetch(`http://localhost:3000/dogs/${dogId}`, {
+// Send PATCH request to update likes count
+fetch(`http://localhost:3000/dogs/${dogId}`, {
         method: 'PATCH',
         headers: {
             'Content-Type':'application/json',
@@ -68,105 +88,41 @@ function handleLike(event) {
             likesElement.textContent = `${updatedDog.likes} likes`;
         })
         .catch(error => console.error("Error updating dog likes", error));
-    }
+}
 
-    // Changing woof to hello on mouse over
-    const barkSpan = document.querySelector('.bark');
+// Change contestants to woof woof on mouseover
+const barkSpan = document.querySelector('.bark');
 
-    barkSpan.addEventListener('mouseenter', function() {
-        console.log('Entered')
-        barkSpan.textContent = 'WOOF WOOF';
-    });
-
-    barkSpan.addEventListener('mouseleave', function() {
-        barkSpan.textContent = 'CONTESTANTS';
-    });
-
-    // Handle submit function
-    document.querySelector('#form').addEventListener('submit', handleSubmit);
-
-    function handleSubmit(e){
-        e.preventDefault();
-        let dogObj = {
-            name:e.target.name.value,
-            breed:e.target.breed.value,
-            description:e.target.description.value,
-            image:e.target.image.value,
-            likes: 0
-        };
-        renderOneDog(dogObj);
-        addNewDog(dogObj);
-    }
-
-    function addNewDog(dogObj){
-        fetch('http://localhost:3000/dogs', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body:JSON.stringify(dogObj)
-        })
-        .then(response => response.json())
-        .then(dog => console.log(dog))
-        .catch(error => console.error("Error adding dog", error));
-    }
-
-    function renderMostLikedDog() {
-        const mostLikedDogContainer = document.querySelector("#most-liked-dog");
-        mostLikedDogContainer.innerHTML = "";
-        if (mostLikedDog) {
-            const name = document.createElement('p');
-            name.textContent = `${mostLikedDog.name} the ${mostLikedDog.breed}`;
-            name.className = 'most-liked-dog-name';
-            mostLikedDogContainer.appendChild(name);
-            
-            const img = document.createElement('img');
-            img.src = mostLikedDog.image;
-            img.alt = `${mostLikedDog.name} the ${mostLikedDog.breed}`;
-            img.className = 'most-liked-dog-image';
-            mostLikedDogContainer.appendChild(img);
-        }
-    }
-
-    const submitDogButton = document.querySelector('.hero-btn');
-    const formSection = document.querySelector('#form');
-
-    // Function to scroll to the form section
-    function scrollToForm() {
-        formSection.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Add click event listener to the button
-    submitDogButton.addEventListener('click', scrollToForm);
-
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navigation = document.querySelector('.navigation');
-    
-    menuToggle.addEventListener('click', () => {
-        navigation.classList.toggle('open'); // Toggle the 'open' class on the navigation
-        menuToggle.classList.toggle('open'); // Toggle the 'open' class on the menu toggle bars
-    });
-    
-    const form = document.querySelector('.dog-form');
-const thankYouMessage = document.querySelector('.thank-you');
-
-form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the form from submitting
-    form.style.display = 'none'; // Hide the form
-    thankYouMessage.style.display = 'block'; // Show the thank you message
-})
-
-const textarea = document.querySelector('textarea');
-
-textarea.addEventListener('input', function() {
-    if (this.value.length > 100) {
-        this.value = this.value.substring(0, 100); // Limit the text to 100 characters
-    }
+barkSpan.addEventListener('mouseenter', function() {
+    console.log('Entered')
+    barkSpan.textContent = 'WOOF WOOF';
 });
 
+barkSpan.addEventListener('mouseleave', function() {
+    barkSpan.textContent = 'CONTESTANTS';
+});
+
+// Render dog image of dog with most likes in the leader section
+function renderMostLikedDog() {
+    const mostLikedDogContainer = document.querySelector("#most-liked-dog");
+    mostLikedDogContainer.innerHTML = "";
+    if (mostLikedDog) {
+        const name = document.createElement('p');
+        name.textContent = `${mostLikedDog.name} the ${mostLikedDog.breed}`;
+        name.className = 'most-liked-dog-name';
+        mostLikedDogContainer.appendChild(name);
+        
+        const img = document.createElement('img');
+        img.src = mostLikedDog.image;
+        img.alt = `${mostLikedDog.name} the ${mostLikedDog.breed}`;
+        img.className = 'most-liked-dog-image';
+        mostLikedDogContainer.appendChild(img);
+    }
+}
+
+// Leader section confetti animation
 const container = document.querySelector('.confetti-container');
 
-// Number of confetti pieces to add
 const numConfetti = 30;
 
 for (let i = 0; i < numConfetti; i++) {
@@ -175,6 +131,52 @@ for (let i = 0; i < numConfetti; i++) {
     container.appendChild(confetti);
 }
 
+// Handle form submit 
+document.querySelector('#form').addEventListener('submit', handleSubmit);
 
+function handleSubmit(e){
+    e.preventDefault();
+    let dogObj = {
+        name:e.target.name.value,
+        breed:e.target.breed.value,
+        description:e.target.description.value,
+        image:e.target.image.value,
+        likes: 0
+    };
+    renderOneDog(dogObj);
+    addNewDog(dogObj);
+}
+
+function addNewDog(dogObj){
+    fetch('http://localhost:3000/dogs', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(dogObj)
+    })
+    .then(response => response.json())
+    .then(dog => console.log(dog))
+     .catch(error => console.error("Error adding dog", error));
+}
+
+// Limit form textarea characters 
+const textarea = document.querySelector('textarea');
+
+textarea.addEventListener('input', function() {
+    if (this.value.length > 100) {
+        this.value = this.value.substring(0, 100); // Limit the text to 100 characters
+    }
+});
+
+// Display thank you message after form submit
+const form = document.querySelector('.dog-form');
+const thankYouMessage = document.querySelector('.thank-you');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the form from submitting
+    form.style.display = 'none'; // Hide the form
+    thankYouMessage.style.display = 'block'; // Show the thank you message
+})
 
 })
