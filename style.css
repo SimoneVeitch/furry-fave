@@ -14,7 +14,7 @@ body, html {
     background-color: #f9faf4;
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure it appears above other content */
+    z-index: 2000; /* Ensure it appears above other content */
 }
 
 .navigation {
@@ -51,83 +51,109 @@ li.navelement {
 }
 
 #hero {
-  align-items: center;
-  justify-items: center;
-  background: #f9faf4;
-  color: #000000;
-}
-
-h1 {
-    font-family: "Ysabeau SC", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-    font-size: 90px;
-    color: #4a6163;
-    text-align: center;
-    margin: 10px;
-}
-
-#intro {
-    padding-top: 40px;
-    padding-bottom: 20px;
-    background-color: #4a6163;
-    text-align: center;
-    color:#ffffff;
-}
-
-.hero-btn {
-   width: 150px;
-   height: 50px;
-   bottom: 0;
-   margin: 0 auto; /* Center the button horizontally */
-    display: block; /* Make the button a block-level element */
-   text-align: center;
-   background-color: #f17a7e;
-   font-family: "Ysabeau SC", sans-serif;
+    align-items: center;
+    justify-items: center;
+    background: #f9faf4;
+    color: #000000;
+  }
+  
+  h1 {
+      font-family: "Ysabeau SC", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 900;
     font-style: normal;
-    font-size: 18px;
-   color: #f9faf4;
-   border: none;
-   cursor: pointer;
-   border-radius: 10px 10px 0px 0px;
+      font-size: 90px;
+      color: #4a6163;
+      text-align: center;
+      margin: 10px;
+  }
+  
+  #intro {
+      padding-top: 40px;
+      padding-bottom: 20px;
+      background-color: #4a6163;
+      text-align: center;
+      color:#ffffff;
+  }
+  
+  .hero-btn {
+     width: 150px;
+     height: 50px;
+     bottom: 0;
+     margin: 0 auto; /* Center the button horizontally */
+      display: block; /* Make the button a block-level element */
+     text-align: center;
+     background-color: #f17a7e;
+     font-family: "Ysabeau SC", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 18px;
+     color: #f9faf4;
+     border: none;
+     cursor: pointer;
+     border-radius: 10px 10px 0px 0px;
+  }
+  
+  .hero-btn:hover {
+      background-color: #f9a66c;
+  }
+
+  @keyframes rotateIcon {
+    0%, 100% {
+        transform: rotate(-10deg); /* Rotate 30 degrees to the left */
+    }
+    50% {
+        transform: rotate(10deg); /* Rotate back 60 degrees to the right */
+    }
 }
 
-.hero-btn:hover {
-    background-color: #f9a66c;
+.medal-img {
+    height: 150px;
+    width: auto;
+    filter: invert(36%) sepia(7%) saturate(1282%) hue-rotate(136deg) brightness(93%) contrast(87%);
+    animation: rotateIcon 2s linear infinite;
 }
+
 
 #contestants {
     background-color: #f9faf4;;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 
-.bark {
-    font-family: "Ysabeau SC", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-    font-size: 70px;
+#contestants h2 {
     color: #4a6163;
-    text-align: center;
+    display: inline;
 }
 
-#contestants h3 {
-    color: #4a6163;
+.heart img {
+    height: 100px;
+    width: auto;
+    filter: invert(84%) sepia(36%) saturate(7373%) hue-rotate(310deg) brightness(102%) contrast(89%);
+    animation: rotateIcon 2s linear infinite;
 }
+
+.dog-tongue img {
+    height: 100px;
+    width: auto;
+    filter: invert(97%) sepia(77%) saturate(277%) hue-rotate(302deg) brightness(108%) contrast(96%);
+    animation: rotateIcon 2s linear infinite;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 h2 {
         font-family: "Ysabeau SC", sans-serif;
       font-optical-sizing: auto;
       font-weight: 900;
       font-style: normal;
-        font-size: 70px;
+        font-size: 60px;
         color: black;
         margin-bottom: 25px;
 }
@@ -348,7 +374,7 @@ p {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    font-size: 50px;
+    font-size: 40px;
    color: #f9faf4;
    position: relative;
 }

@@ -75,11 +75,11 @@ function handleLike(event) {
 
     barkSpan.addEventListener('mouseenter', function() {
         console.log('Entered')
-        barkSpan.textContent = 'HELLO!';
+        barkSpan.textContent = 'WOOF WOOF';
     });
 
     barkSpan.addEventListener('mouseleave', function() {
-        barkSpan.textContent = 'WOOF!';
+        barkSpan.textContent = 'CONTESTANTS';
     });
 
     // Handle submit function
