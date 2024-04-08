@@ -67,8 +67,6 @@ p {
     align-items: center;
     padding: 10px 20px;
     background-color: #f9faf4;
-    position: sticky;
-    z-index: 2000; /* Ensure it appears above other content */
 }
 
 .navigation {

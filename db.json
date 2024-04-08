@@ -6,7 +6,7 @@
       "name": "Vanilla",
       "breed": "Cocker Spaniel",
       "description": "Vanilla is a merry and busy little dog. Profuse and glamorous,  she is an intelligent dog who loves her family",
-      "likes": 7
+      "likes": 13
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "name": "Angus",
       "breed": "Shepherd Dog",
       "description": "Solid, muscular and robust, Angus is an athletic dog who loves to help his family on the farm. Playful and loyal, Angus is a great companion",
-      "likes": 10
+      "likes": 12
     },
     {
       "id": "3",
