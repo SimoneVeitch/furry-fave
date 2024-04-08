@@ -17,7 +17,7 @@ h1 {
     letter-spacing: 0.5px;
     color: #4a6163;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 60px;
     margin: 10px;
   }
 
@@ -65,15 +65,23 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
     background-color: #f9faf4;
+    position: fixed;
+    padding-top: 5px;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.header img {
+    padding-right: 15px;
 }
 
 .navigation {
     display: flex;
     justify-content: center;
     margin: 0;
-    padding: 0;
+    padding-left: 15px;
     list-style-type: none;
     text-align: center;
 }
