@@ -6,7 +6,7 @@
       "name": "Vanilla",
       "breed": "Cocker Spaniel",
       "description": "Vanilla is a merry and busy little dog. Profuse and glamorous,  she is an intelligent dog who loves her family",
-      "likes": 13
+      "likes": 14
     },
     {
       "id": "2",
@@ -30,7 +30,7 @@
       "name": "Dottie",
       "breed": "Dalmatian",
       "description": "Dottie is friendly and outgoing. She is dedicated and loyal, enjoys company and is always clowning about ",
-      "likes": 7
+      "likes": 8
     },
     {
       "id": "5",
