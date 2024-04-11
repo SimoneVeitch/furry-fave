@@ -148,6 +148,7 @@ li.navelement {
     height: 150px;
     width: auto;
     filter: invert(36%) sepia(7%) saturate(1282%) hue-rotate(136deg) brightness(93%) contrast(87%);
+    -webkit-appearance: none;
     animation: rotateIcon 2s linear infinite;
 }
 
@@ -180,6 +181,7 @@ li.navelement {
     height: 100px;
     width: auto;
     filter: invert(84%) sepia(36%) saturate(7373%) hue-rotate(310deg) brightness(102%) contrast(89%);
+    -webkit-appearance: none;
     animation: rotateIcon 2s linear infinite;
 }
 
@@ -219,6 +221,10 @@ li.navelement {
     scroll-snap-align: start;
     width: 300px;
     height: 300px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0); /* Safari prefix */
 }
 
 .card-inner {
@@ -226,10 +232,14 @@ li.navelement {
     height: 100%;
     transition: transform 0.5s;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 }
 
 .card:hover .card-inner {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
 }
 
 .card-front,
@@ -238,6 +248,7 @@ li.navelement {
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; 
 }
 
 .card-front {
@@ -251,6 +262,9 @@ li.navelement {
     color: #f9faf4;
     text-align: center;
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
     border-radius: 10px;
 }
 
@@ -526,6 +540,16 @@ p {
     font-size: 25px;
 }
 
+.most-liked-dog-image {
+    display: flex;
+    height: 300px;
+    border-radius: 10px;
+    width: auto;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 input[type=text], select, textarea {
     width: 80%; 
 }
@@ -546,6 +570,7 @@ input[type=text], select, textarea {
         flex-direction: column;
         align-items: center;
         padding-top: 20px;
+        margin-bottom: 15px;
     }
 
     .bar {
@@ -554,6 +579,7 @@ input[type=text], select, textarea {
         background-color: #4a6163;
         margin: 4px 0;
         transition: transform 0.4s;
+        margin-left: 10px;
     }
 
     .bar.open {
@@ -567,4 +593,6 @@ input[type=text], select, textarea {
     .bar.open:nth-child(3) {
         transform: rotate(45deg) translate(-5px, -5px);
     }
+
+    
 }
