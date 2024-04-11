@@ -45,7 +45,7 @@ function renderOneDog(dog) {
 
 //Fetch data
 function getAllDogs(){
-    fetch('http://localhost:3000/dogs')
+    fetch('https://dogs-njbi.onrender.com/dogs')
     .then (response => response.json())
     .then (dogData => 
         {dogData.forEach(dog => renderOneDog(dog));
@@ -72,7 +72,7 @@ function handleLike(event) {
     likesCount++;
 
 // Send PATCH request to update likes count
-fetch(`http://localhost:3000/dogs/${dogId}`, {
+fetch(`https://dogs-njbi.onrender.com/dogs/${dogId}`, {
         method: 'PATCH',
         headers: {
             'Content-Type':'application/json',
@@ -148,7 +148,7 @@ function handleSubmit(e){
 }
 
 function addNewDog(dogObj){
-    fetch('http://localhost:3000/dogs', {
+    fetch('https://dogs-njbi.onrender.com/dogs', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
