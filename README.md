@@ -16,15 +16,11 @@ As per the project requirements, Furry Fave is a HTML/CSS/JS frontend that acces
 
 The web application runs on a single page, using event listeners and loop iterations to fetch, patch and display data. 
 
-## Getting started 
+## Web application data
 
-The data I am using on the web application is located in a db.json file. For the application to display this data and the features around it, you will need to get the JSON server up and running in the background. 
+The data I am using on the web application is hosted on render.com. During my QA the data has loaded with no delay or issues, however, if you are not able to see the contestants gallery or the leading puppy when you first enter the page please note that this will be due to delays in the data loading and will be an issue with render.com and not the site itself. 
 
-First you need to fork and clone the project into your local directory. Please fork a copy into your GitHub account first, then clone from that copy, to avoid any edits being made to my original copy. 
-
-Next, start up JSON Server. To do this, you run json-server --watch db.json in your terminal. Running this command will instruct json-server to use a db.json file in your terminal's current directory, so make sure to run this command from the same directory as the project. In your browser, you can verify the server is running by navigating to http://localhost:3000/dogs to see the API data.
-
-Leave the server running for the duration of your review. Open a second terminal window and navigate to the project website by opening the index.html file in the browser. Please note Google Chrome is the preferred browser for this project review. 
+If the issue persist please get in touch with me so I can troubleshoot and fix any issue there might be. 
 
 ## Web application features and functionality
 
