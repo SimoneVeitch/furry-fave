@@ -18,8 +18,8 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.navigation');
     
 menuToggle.addEventListener('click', () => {
-    navigation.classList.toggle('open'); // Toggle the 'open' class on the navigation
-    menuToggle.classList.toggle('open'); // Toggle the 'open' class on the menu toggle bars
+    navigation.classList.toggle('open'); 
+    menuToggle.classList.toggle('open'); 
  });
 
 // Render dog cards

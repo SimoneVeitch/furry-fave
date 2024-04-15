@@ -5,7 +5,6 @@ body, html {
     height: 100vh;
     margin: 0;
     padding: 0;
-    cursor: url("./Images/Paw_Cursor.png"), auto, default;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -36,7 +35,7 @@ h3 {
     font-style: normal;
     font-size: 30px;
     letter-spacing: 0.5px;
-    color: #4a6163;
+    color: #f9faf4;
 }
 
 p {
@@ -73,10 +72,6 @@ p {
     z-index: 99;
 }
 
-.header img {
-    padding-right: 15px;
-}
-
 .navigation {
     display: flex;
     justify-content: center;
@@ -108,10 +103,12 @@ li.navelement {
 .logo img {
     max-height: 30px;
     max-width: auto;
+    padding-right: 15px;
+    margin-top:5px;
 }
 
 .menu-toggle {
-    display: none; /* Hide the menu toggle by default on larger screens */
+    display: none; /* Hiding the menu toggle by default on larger screens */
 }
 
 /* Hero section */
@@ -125,7 +122,7 @@ li.navelement {
     width: 150px;
     height: 50px;
     bottom: 0;
-    margin: 0 auto; /* Center the button horizontally */
+    margin: 0 auto; 
     display: block; 
     text-align: center;
     background-color: #f17a7e;
@@ -182,19 +179,8 @@ li.navelement {
     width: auto;
     margin-left: 15px;
     margin-right: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     animation: rotateIcon 2s linear infinite;
-}
-
-#cards {
-    padding-top: 15px;
-    padding-left: 10px;
-    padding-right: 10px; /* Add padding to the right */
-}
-
-#cards h3 {
-    color: #f9faf4;
-    letter-spacing: 0.5px;
 }
 
 .card-gallery {
@@ -204,12 +190,10 @@ li.navelement {
     min-height: 400px;
     gap: 20px;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
 }
 
 .card-gallery::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+    display: none; /* Hiding scrollbar for Chrome, Safari */
 }
 
 .card:first-child {
@@ -225,7 +209,7 @@ li.navelement {
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transform: translateZ(0);
-    -webkit-transform: translateZ(0); /* Safari prefix */
+    -webkit-transform: translateZ(0); /* Safari flip gallery fix*/
 }
 
 .card-inner {
@@ -233,14 +217,12 @@ li.navelement {
     height: 100%;
     transition: transform 0.5s;
     transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d; /* Safari flip gallery fix*/
 }
 
 .card:hover .card-inner {
     transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg); /* Safari flip gallery fix*/
 }
 
 .card-front,
@@ -249,7 +231,7 @@ li.navelement {
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden; 
+    -webkit-backface-visibility: hidden; /* Safari flip gallery fix*/
 }
 
 .card-front {
@@ -263,9 +245,7 @@ li.navelement {
     color: #f9faf4;
     text-align: center;
     transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg); /* Safari flip gallery fix*/
     border-radius: 10px;
 }
 
@@ -371,7 +351,7 @@ li.navelement {
 }
 
 .confetti-container {
-    position: relative; /* Ensure the confetti stays within this container */
+    position: relative; 
 }
 
 .confetti {
@@ -495,7 +475,7 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: #f9faf4;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 footer img {
@@ -504,6 +484,7 @@ footer img {
 
 footer p {
     color: #4a6163;
+    padding-top: 5px;
 }
 
 /* Responsive styles */
@@ -558,16 +539,16 @@ input[type=text], select, textarea {
 
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Show the menu toggle on smaller screens */
+        display: block; /* Showing the menu toggle on smaller screens */
         cursor: pointer;
     }
 
     .navigation {
-        display: none; /* Hide the navigation by default on smaller screens */
+        display: none; /* Hiding the navigation by default on smaller screens */
     }
 
     .navigation.open {
-        display: flex; /* Show the navigation when menu is open */
+        display: flex; /* Showing the navigation when menu is open */
         flex-direction: column;
         align-items: center;
         padding-top: 20px;
