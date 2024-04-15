@@ -145,10 +145,10 @@ li.navelement {
  }
 
  .medal-img {
-    height: 150px;
+    height: 100px;
     width: auto;
-    filter: invert(36%) sepia(7%) saturate(1282%) hue-rotate(136deg) brightness(93%) contrast(87%);
-    -webkit-appearance: none;
+    margin-bottom: 30px;
+    margin-top: 20px;
     animation: rotateIcon 2s linear infinite;
 }
 
@@ -178,10 +178,11 @@ li.navelement {
 }
 
 .heart img {
-    height: 100px;
+    height: 75px;
     width: auto;
-    filter: invert(84%) sepia(36%) saturate(7373%) hue-rotate(310deg) brightness(102%) contrast(89%);
-    -webkit-appearance: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
     animation: rotateIcon 2s linear infinite;
 }
 
@@ -426,9 +427,9 @@ li.navelement {
 /* Form section */
 
 .dog-tongue img {
-    height: 100px;
+    height: 75px;
     width: auto;
-    filter: invert(97%) sepia(77%) saturate(277%) hue-rotate(302deg) brightness(108%) contrast(96%);
+    margin-bottom: 20px;
     animation: rotateIcon 2s linear infinite;
 }
 
