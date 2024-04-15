@@ -12,7 +12,7 @@ Users can also add their own dog to the competition by submitting a form with th
 
 The Furry Fave web application is my response to the Academi Xi Front-End Web Development: Transform course, Phase 1 Project. 
 
-As per the project requirements, Furry Fave is a HTML/CSS/JS frontend that accesses data from a db.json file using json-server. I have deployed my json-server on Render (www.render.com), which is where I am fetching my data from for this project. 
+As per the project requirements, Furry Fave is a HTML/CSS/JS frontend that accesses data from a json-server. I have deployed my json-server on Render (www.render.com), which is where I am fetching my data from for this project. 
 
 The web application runs on a single page, using event listeners and loop iterations to fetch, patch and display data. 
 
@@ -28,9 +28,9 @@ Please note:
 
 ## Getting started
 
-Please use Chrome as our browser for the best experience. 
+Please use Chrome as your browser for the best experience. 
 
-The app has only been tested on Chrome and Safari, which are the most commonly used browser in Australia (source: https://gs.statcounter.com/browser-market-share/all/australia).
+The app has only been tested on Chrome and Safari, which are the most commonly used browsers in Australia (source: https://gs.statcounter.com/browser-market-share/all/australia).
 
 ## Web application features and functionality
 
