@@ -22,6 +22,16 @@ The data I am using on the web application is on a json-server, which I have dep
 
 If the issue persists please get in touch with me so I can troubleshoot and fix any issue there might be. 
 
+Please note: 
+* Once a dog has received more likes than the current leading puppy, you will need to refresh the browser tab to see this dog in the Leader section. 
+* Once you have submitted a dog it will take a few moments before the like functionality works for that dog. If you have issues liking a dog you have submitted, wait a couple of minutes, refresh the page and try again. 
+
+## Getting started
+
+Please use Chrome as our browser for the best experience. 
+
+The app has only been tested on Chrome and Safari, which are the most commonly used browser in Australia (source: https://gs.statcounter.com/browser-market-share/all/australia).
+
 ## Web application features and functionality
 
 The web application has seven sections, each with its own key features and functionality.
