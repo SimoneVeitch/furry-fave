@@ -564,17 +564,16 @@ input[type=text], select, textarea {
         margin-left: 10px;
     }
 
-    .bar.open {
-        transform: rotate(-45deg) translate(-5px, 5px);
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
     }
-
-    .bar.open:nth-child(2) {
+    
+    .menu-toggle.open .bar:nth-child(2) {
         opacity: 0;
     }
-
-    .bar.open:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -5px);
+    
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
-
     
 }
