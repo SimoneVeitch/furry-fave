@@ -120,17 +120,6 @@ function renderMostLikedDog() {
     }
 }
 
-// Leader section confetti animation
-const container = document.querySelector('.confetti-container');
-
-const numConfetti = 30;
-
-for (let i = 0; i < numConfetti; i++) {
-    const confetti = document.createElement('div');
-    confetti.classList.add('confetti');
-    container.appendChild(confetti);
-}
-
 // Handle form submit 
 document.querySelector('#form').addEventListener('submit', handleSubmit);
 
