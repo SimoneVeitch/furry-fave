@@ -93,12 +93,11 @@ fetch(`https://dogs-njbi.onrender.com/dogs/${dogId}`, {
 // Change contestants to woof woof on mouseover
 const barkSpan = document.querySelector('.bark');
 
-barkSpan.addEventListener('mouseenter', function() {
-    console.log('Entered')
+barkSpan.addEventListener('mouseenter', () => {
     barkSpan.textContent = 'WOOF WOOF';
 });
 
-barkSpan.addEventListener('mouseleave', function() {
+barkSpan.addEventListener('mouseleave', () => {
     barkSpan.textContent = 'CONTESTANTS';
 });
 
@@ -148,15 +147,6 @@ function addNewDog(dogObj){
     .then(dog => console.log(dog))
      .catch(error => console.error("Error adding dog", error));
 }
-
-// Limit form textarea characters 
-const textarea = document.querySelector('textarea');
-
-textarea.addEventListener('input', function() {
-    if (this.value.length > 100) {
-        this.value = this.value.substring(0, 100); // Limit the text to 100 characters
-    }
-});
 
 // Display thank you message after form submit
 const form = document.querySelector('.dog-form');
