@@ -363,6 +363,7 @@ li.navelement {
     animation: confetti 4.5s ease-in-out infinite;
     transform-origin: left top;
   }
+  
   .confetti:nth-child(1) {
     background-color: #f2d74e; left: 10%; animation-delay: 0;
   }

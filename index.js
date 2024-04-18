@@ -158,4 +158,15 @@ form.addEventListener('submit', function (event) {
     thankYouMessage.style.display = 'block'; // Show the thank you message
 })
 
+const container = document.querySelector('.confetti-container');
+
+const numConfetti = 30;
+
+for (let i = 0; i < numConfetti; i++) {
+    const confetti = document.createElement('div');
+    confetti.classList.add('confetti');
+    container.appendChild(confetti);
+}
+
+
 })
